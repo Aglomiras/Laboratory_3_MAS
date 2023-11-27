@@ -10,12 +10,12 @@ import java.util.Arrays;
 import java.util.List;
 
 @Slf4j
-public class NodeTransferBehaviours extends Behaviour {
+public class NodeForwardTransferBehaviours extends Behaviour {
     private List<String> neighborsAgent;
     private List<String> weightNeighborsAgent;
     private MessageTemplate messageTemplate;
 
-    public NodeTransferBehaviours(List<String> neighborsAgent, List<String> weightNeighborsAgent) {
+    public NodeForwardTransferBehaviours(List<String> neighborsAgent, List<String> weightNeighborsAgent) {
         this.neighborsAgent = neighborsAgent;
         this.weightNeighborsAgent = weightNeighborsAgent;
     }

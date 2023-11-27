@@ -3,7 +3,7 @@ package org.example.Version_2.Agents;
 import jade.core.Agent;
 import lombok.extern.slf4j.Slf4j;
 import org.example.Version_2.Behaviours.NodeBackTransferBehaviour;
-import org.example.Version_2.Behaviours.NodeTransferBehaviours;
+import org.example.Version_2.Behaviours.NodeForwardTransferBehaviours;
 import org.example.Version_2.Behaviours.WaitInitBehaviour;
 import org.example.Version_2.Supported.ParserXml;
 
@@ -22,7 +22,7 @@ public class NodeAgent extends Agent {
                     parserXml.findNeighborsAgents(),
                     parserXml.findWeightNeighborsAgents()));
         } else {
-            addBehaviour(new NodeTransferBehaviours(parserXml.findNeighborsAgents(), parserXml.findWeightNeighborsAgents()));
+            addBehaviour(new NodeForwardTransferBehaviours(parserXml.findNeighborsAgents(), parserXml.findWeightNeighborsAgents()));
             addBehaviour(new NodeBackTransferBehaviour());
         }
     }
