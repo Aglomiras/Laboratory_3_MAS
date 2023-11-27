@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cfg>
+    <position>8</position>
+    <neighbours>
+        <neighbour>
+            <neigPositNode>4</neigPositNode>
+            <weight>25</weight>
+        </neighbour>
+        <neighbour>
+            <neigPositNode>5</neigPositNode>
+            <weight>17</weight>
+        </neighbour>
+        <neighbour>
+            <neigPositNode>6</neigPositNode>
+            <weight>9</weight>
+        </neighbour>
+        <neighbour>
+            <neigPositNode>7</neigPositNode>
+            <weight>1</weight>
+        </neighbour>
+        <neighbour>
+            <neigPositNode>9</neigPositNode>
+            <weight>21</weight>
+        </neighbour>
+    </neighbours>
+</cfg>

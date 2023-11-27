@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<cfg>
+    <first_agent>1</first_agent>
+    <last_agent>12</last_agent>
+    <position>1</position>
+    <neighbours>
+        <neighbour>
+            <neigPositNode>2</neigPositNode>
+            <weight>4</weight>
+        </neighbour>
+        <neighbour>
+            <neigPositNode>3</neigPositNode>
+            <weight>5</weight>
+        </neighbour>
+        <neighbour>
+            <neigPositNode>4</neigPositNode>
+            <weight>2</weight>
+        </neighbour>
+        <neighbour>
+            <neigPositNode>5</neigPositNode>
+            <weight>10</weight>
+        </neighbour>
+    </neighbours>
+</cfg>
