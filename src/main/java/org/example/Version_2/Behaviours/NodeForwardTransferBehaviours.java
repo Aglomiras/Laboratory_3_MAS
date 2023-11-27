@@ -29,7 +29,7 @@ public class NodeForwardTransferBehaviours extends Behaviour {
     public void action() {
         ACLMessage receiv = myAgent.receive(messageTemplate);
 
-        String[] contArr = new String[3];
+        String[] contArr;
         if (receiv != null) {
             contArr = receiv.getContent().split(",");
             if (contArr[1].equals(getAgent().getLocalName())) {
@@ -64,6 +64,7 @@ public class NodeForwardTransferBehaviours extends Behaviour {
         message1.addReceiver(new AID(path[path.length - 1], false));
         getAgent().send(message1);
     }
+
     public void messageProp(String[] contArr) {
         String[] path = parsPath(contArr);
         String path2 = parsPathCont(contArr);
@@ -73,6 +74,7 @@ public class NodeForwardTransferBehaviours extends Behaviour {
         message3.addReceiver(new AID(path[path.length - 1], false));
         getAgent().send(message3);
     }
+
     public void messageInfo(String[] contArr, String neighborsAgent, String weightNeighborsAgent) {
         ACLMessage message2 = new ACLMessage(ACLMessage.INFORM);
         double val = Double.parseDouble(contArr[2]) + Double.parseDouble(weightNeighborsAgent);
@@ -80,10 +82,12 @@ public class NodeForwardTransferBehaviours extends Behaviour {
         message2.addReceiver(new AID(neighborsAgent, false));
         getAgent().send(message2);
     }
+
     public String[] parsPath(String[] contArr) {
         String[] path = contArr[0].split("\\|");
         return path;
     }
+
     public String parsPathCont(String[] contArr) {
         String[] path = parsPath(contArr);
         String[] path1 = Arrays.stream(Arrays.copyOfRange(path, 0, path.length - 1)).toArray(String[]::new);
